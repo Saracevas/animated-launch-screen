@@ -8,14 +8,14 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class DistrictViewController: UIViewController {
 	
 	var scrollView: UIScrollView!
 	var imageView: UIImageView!
-	
-	@IBOutlet weak var usernameField: UITextField!
-	@IBOutlet weak var passwordField: UITextField!
-	@IBOutlet weak var loginButton: UIButton!
+
+	@IBOutlet weak var searchField: UITextField!
+	@IBOutlet weak var searchButton: UIButton!
+	@IBOutlet weak var sloganLabel: UILabel!
 	
 	@IBOutlet weak var logoTopConstraint: NSLayoutConstraint!
 	@IBOutlet weak var logoBottomConstraint: NSLayoutConstraint!
@@ -26,14 +26,10 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		usernameField.alpha = 0.0
-		passwordField.alpha = 0.0
-		loginButton.alpha = 0.0
-		
-		self.logoTopConstraint.constant = 265
-		self.logoBottomConstraint.constant = 285
+		initialiseViews()
 		
 		displayAndAnimateBackground()
+		
     }
 	
 	override func viewDidAppear(_ animated: Bool) {
@@ -42,11 +38,15 @@ class LoginViewController: UIViewController {
 		animateLogo()
 
 	}
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+	
+	private func initialiseViews() {
+		
+		changeSearchFormAppearance()
+		
+		self.logoTopConstraint.constant = 265
+		self.logoBottomConstraint.constant = 285
+		
+	}
 	
 	override var preferredStatusBarStyle: UIStatusBarStyle {
 		return .lightContent
@@ -63,11 +63,38 @@ class LoginViewController: UIViewController {
 		}, completion: nil)
 
 		UIView.animate(withDuration: 0.5, delay: 0.5, options: UIViewAnimationOptions.curveEaseOut, animations: {
-			self.usernameField.alpha = 1.0
-			self.passwordField.alpha = 1.0
-			self.loginButton.alpha = 1.0
+			self.sloganLabel.alpha = 1.0
+			self.searchField.alpha = 1.0
+			self.searchButton.alpha = 1.0
 		}, completion: nil)
 
+	}
+	
+	private func changeSearchFormAppearance() {
+		
+		// Set opacity to 0 so we can fade in after the logo is animated.
+		sloganLabel.alpha = 0.0
+		searchField.alpha = 0.0
+		searchButton.alpha = 0.0
+		
+		// Change search field ppearance
+		let maskPath = UIBezierPath(roundedRect: searchField.bounds, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: 7.0, height: 0.0))
+		let maskLayer = CAShapeLayer()
+		maskLayer.path = maskPath.cgPath
+		searchField.layer.mask = maskLayer
+		searchField.frame.size.height = 50
+		searchField.layer.borderWidth = 3
+		searchField.layer.borderColor = UIColor.Theme.yellow.cgColor
+		
+		
+		
+		// Change search button appearance
+		let maskPath2 = UIBezierPath(roundedRect: searchButton.bounds, byRoundingCorners: [.bottomLeft, .bottomRight], cornerRadii: CGSize(width: 7.0, height: 0.0))
+		let maskLayer2 = CAShapeLayer()
+		maskLayer2.path = maskPath2.cgPath
+		searchButton.layer.mask = maskLayer2
+		searchButton.backgroundColor = UIColor.Theme.yellow
+		
 	}
 	
 	/// Create an animated background from splash image.

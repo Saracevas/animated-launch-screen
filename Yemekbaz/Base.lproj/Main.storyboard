@@ -15,10 +15,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Login View Controller-->
+        <!--District View Controller-->
         <scene sceneID="7OV-5U-gjY">
             <objects>
-                <viewController id="SBJ-Gs-E3y" customClass="LoginViewController" customModule="Yemekbaz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="SBJ-Gs-E3y" customClass="DistrictViewController" customModule="Yemekbaz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2uy-na-IFH"/>
                         <viewControllerLayoutGuide type="bottom" id="3QE-un-x90"/>
@@ -30,45 +30,58 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="mVO-hq-WcE">
                                 <rect key="frame" x="67" y="171" width="240" height="97"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="IM0-nO-4XJ">
-                                <rect key="frame" x="87" y="283" width="201" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" red="0.72578638792037964" green="0.11885253340005875" blue="0.14785823225975037" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ozl-M1-Dnr">
-                                <rect key="frame" x="87" y="321" width="201" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" red="0.72578638790000005" green="0.1188525334" blue="0.1478582323" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mz0-re-FPz">
-                                <rect key="frame" x="87" y="359" width="201" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qq4-MH-J8k">
+                                <rect key="frame" x="67" y="362" width="240" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="CQR-2i-ROz"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="19"/>
-                                <state key="normal" title="Login">
+                                <state key="normal" title="Search">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Closer than your kitchen to you!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="0Gd-Um-M4l">
+                                <rect key="frame" x="16" y="278" width="343" height="31"/>
+                                <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your District" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="IM0-nO-4XJ">
+                                <rect key="frame" x="67" y="317" width="240" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="k4K-hE-5ME"/>
+                                </constraints>
+                                <color key="textColor" red="0.72578638792037964" green="0.11885253340005875" blue="0.14785823225975037" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.72578853369999996" green="0.1189549342" blue="0.1431607902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="0Gd-Um-M4l" firstAttribute="trailing" secondItem="9Oh-X8-I6d" secondAttribute="trailingMargin" id="7bv-qS-cCZ"/>
+                            <constraint firstItem="3QE-un-x90" firstAttribute="top" secondItem="Qq4-MH-J8k" secondAttribute="bottom" constant="265" id="8ri-SV-bhj"/>
+                            <constraint firstItem="Qq4-MH-J8k" firstAttribute="leading" secondItem="9Oh-X8-I6d" secondAttribute="leadingMargin" constant="51" id="KQp-7s-nJH"/>
+                            <constraint firstItem="0Gd-Um-M4l" firstAttribute="top" secondItem="mVO-hq-WcE" secondAttribute="bottom" constant="10" id="Pvc-fA-kLJ"/>
                             <constraint firstItem="mVO-hq-WcE" firstAttribute="leading" secondItem="9Oh-X8-I6d" secondAttribute="leadingMargin" constant="51" id="Suz-qc-LPR"/>
                             <constraint firstItem="mVO-hq-WcE" firstAttribute="top" secondItem="2uy-na-IFH" secondAttribute="bottom" constant="151" id="cXQ-oQ-ARd"/>
+                            <constraint firstItem="IM0-nO-4XJ" firstAttribute="leading" secondItem="9Oh-X8-I6d" secondAttribute="leadingMargin" constant="51" id="eYo-Km-LfD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qq4-MH-J8k" secondAttribute="trailing" constant="52" id="gZe-QM-Mab"/>
+                            <constraint firstItem="Qq4-MH-J8k" firstAttribute="top" secondItem="IM0-nO-4XJ" secondAttribute="bottom" id="h9U-fX-8Pf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IM0-nO-4XJ" secondAttribute="trailing" constant="52" id="hex-Yy-KJh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mVO-hq-WcE" secondAttribute="trailing" constant="52" id="lFr-Ju-AjZ"/>
+                            <constraint firstItem="0Gd-Um-M4l" firstAttribute="leading" secondItem="9Oh-X8-I6d" secondAttribute="leadingMargin" id="nDD-vk-R6z"/>
                             <constraint firstItem="3QE-un-x90" firstAttribute="top" secondItem="mVO-hq-WcE" secondAttribute="bottom" constant="399" id="whZ-X6-4GO"/>
+                            <constraint firstItem="IM0-nO-4XJ" firstAttribute="top" secondItem="0Gd-Um-M4l" secondAttribute="bottom" constant="8" id="ypA-uZ-aCn"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="loginButton" destination="Mz0-re-FPz" id="s4o-C9-yk2"/>
                         <outlet property="logoBottomConstraint" destination="whZ-X6-4GO" id="8T9-4Y-pNT"/>
                         <outlet property="logoLeftConstraint" destination="Suz-qc-LPR" id="PQo-hY-Tay"/>
                         <outlet property="logoRightConstraint" destination="lFr-Ju-AjZ" id="PGq-wn-DE5"/>
                         <outlet property="logoTopConstraint" destination="cXQ-oQ-ARd" id="p8K-GO-Ia3"/>
-                        <outlet property="passwordField" destination="ozl-M1-Dnr" id="ygC-PS-SHU"/>
-                        <outlet property="usernameField" destination="IM0-nO-4XJ" id="bSZ-jP-vLp"/>
+                        <outlet property="searchButton" destination="Qq4-MH-J8k" id="l7B-4P-2Vf"/>
+                        <outlet property="searchField" destination="IM0-nO-4XJ" id="aBB-Xa-Pfg"/>
+                        <outlet property="sloganLabel" destination="0Gd-Um-M4l" id="iLa-r2-k3k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vvR-5q-hXr" userLabel="First Responder" sceneMemberID="firstResponder"/>

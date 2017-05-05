@@ -11,8 +11,9 @@
 		030B1C121EBBD1F800883FD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030B1C101EBBD1F800883FD4 /* Main.storyboard */; };
 		030B1C141EBBD1F800883FD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030B1C131EBBD1F800883FD4 /* Assets.xcassets */; };
 		030B1C171EBBD1F800883FD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030B1C151EBBD1F800883FD4 /* LaunchScreen.storyboard */; };
-		030B1C1F1EBBDE5900883FD4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030B1C1E1EBBDE5900883FD4 /* LoginViewController.swift */; };
+		030B1C1F1EBBDE5900883FD4 /* DistrictViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030B1C1E1EBBDE5900883FD4 /* DistrictViewController.swift */; };
 		0329A49B1EBBFC66008A9487 /* FiraSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0329A49A1EBBFC35008A9487 /* FiraSans-Bold.ttf */; };
+		0329A49E1EBC9C4B008A9487 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0329A49D1EBC9C4B008A9487 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +23,9 @@
 		030B1C131EBBD1F800883FD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		030B1C161EBBD1F800883FD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		030B1C181EBBD1F800883FD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		030B1C1E1EBBDE5900883FD4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		030B1C1E1EBBDE5900883FD4 /* DistrictViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistrictViewController.swift; sourceTree = "<group>"; };
 		0329A49A1EBBFC35008A9487 /* FiraSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FiraSans-Bold.ttf"; path = "../../../../Downloads/Fira_Sans/FiraSans-Bold.ttf"; sourceTree = "<group>"; };
+		0329A49D1EBC9C4B008A9487 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +58,14 @@
 		030B1C091EBBD1F800883FD4 /* Yemekbaz */ = {
 			isa = PBXGroup;
 			children = (
+				0329A49C1EBC9B86008A9487 /* Commons */,
 				0329A4991EBBFC15008A9487 /* Resources */,
 				030B1C0A1EBBD1F800883FD4 /* AppDelegate.swift */,
 				030B1C101EBBD1F800883FD4 /* Main.storyboard */,
 				030B1C131EBBD1F800883FD4 /* Assets.xcassets */,
 				030B1C151EBBD1F800883FD4 /* LaunchScreen.storyboard */,
 				030B1C181EBBD1F800883FD4 /* Info.plist */,
-				030B1C1E1EBBDE5900883FD4 /* LoginViewController.swift */,
+				030B1C1E1EBBDE5900883FD4 /* DistrictViewController.swift */,
 			);
 			path = Yemekbaz;
 			sourceTree = "<group>";
@@ -73,6 +76,14 @@
 				0329A49A1EBBFC35008A9487 /* FiraSans-Bold.ttf */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		0329A49C1EBC9B86008A9487 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				0329A49D1EBC9C4B008A9487 /* Utils.swift */,
+			);
+			name = Commons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,8 +160,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				030B1C1F1EBBDE5900883FD4 /* LoginViewController.swift in Sources */,
+				030B1C1F1EBBDE5900883FD4 /* DistrictViewController.swift in Sources */,
 				030B1C0B1EBBD1F800883FD4 /* AppDelegate.swift in Sources */,
+				0329A49E1EBC9C4B008A9487 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
