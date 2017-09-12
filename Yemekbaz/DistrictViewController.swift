@@ -22,7 +22,6 @@ class DistrictViewController: UIViewController {
 	@IBOutlet weak var logoRightConstraint: NSLayoutConstraint!
 	@IBOutlet weak var logoLeftConstraint: NSLayoutConstraint!
 	
-	
     override func viewDidLoad() {
         super.viewDidLoad()
 		
@@ -86,8 +85,6 @@ class DistrictViewController: UIViewController {
 		searchField.layer.borderWidth = 3
 		searchField.layer.borderColor = UIColor.Theme.yellow.cgColor
 		
-		
-		
 		// Change search button appearance
 		let maskPath2 = UIBezierPath(roundedRect: searchButton.bounds, byRoundingCorners: [.bottomLeft, .bottomRight], cornerRadii: CGSize(width: 7.0, height: 0.0))
 		let maskLayer2 = CAShapeLayer()
@@ -131,6 +128,19 @@ class DistrictViewController: UIViewController {
 		UIView.animate(withDuration: 60, delay: 60, options: UIViewAnimationOptions.curveLinear, animations: {
 			self.scrollView.setContentOffset(CGPoint(x: 0.0, y: 0.0), animated: false)
 		})
+		
+	}
+	
+	@IBAction func searchButtonPressed(_ sender: UIButton) {
+		
+		// If the search field is empty, shake the form to let the user know.
+		guard searchField.text != "" else {
+			searchField.shake()
+			searchButton.shake()
+			return
+		}
+		
+		self.performSegue(withIdentifier: "showRestaurantsInDistrict", sender: nil)
 		
 	}
 

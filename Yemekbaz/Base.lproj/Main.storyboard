@@ -39,8 +39,11 @@
                                 <state key="normal" title="Search">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="searchButtonPressed:" destination="SBJ-Gs-E3y" eventType="touchUpInside" id="kwW-8e-cm2"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Closer than your kitchen to you!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="0Gd-Um-M4l">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Closer than your kitchen is to you!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="0Gd-Um-M4l">
                                 <rect key="frame" x="16" y="278" width="343" height="31"/>
                                 <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -82,11 +85,58 @@
                         <outlet property="searchButton" destination="Qq4-MH-J8k" id="l7B-4P-2Vf"/>
                         <outlet property="searchField" destination="IM0-nO-4XJ" id="aBB-Xa-Pfg"/>
                         <outlet property="sloganLabel" destination="0Gd-Um-M4l" id="iLa-r2-k3k"/>
+                        <segue destination="LVZ-Lj-gmS" kind="show" identifier="showRestaurantsInDistrict" id="Kgt-bL-i8X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vvR-5q-hXr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="39.200000000000003" y="-121.88905547226388"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pAm-h8-Xzu">
+            <objects>
+                <viewController id="y0Y-hs-IiN" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aAw-nK-Wcd"/>
+                        <viewControllerLayoutGuide type="bottom" id="Epj-Zo-FzF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GJ9-OB-BHY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wS8-j4-5oB">
+                                <rect key="frame" x="166" y="132" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hkz-wi-d3p"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6HG-TN-Pye" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1808.8" y="-122.78860569715144"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uUl-18-6cF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LVZ-Lj-gmS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="c7V-DS-QZN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="y0Y-hs-IiN" kind="relationship" relationship="rootViewController" id="m2Y-LU-0pd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9td-aI-vEx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="869.60000000000002" y="-122.78860569715144"/>
         </scene>
     </scenes>
     <resources>
